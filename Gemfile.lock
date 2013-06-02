@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/tenderlove/psych.git
+  revision: 2c644e184192975b261a81f486a04defa3172b3f
+  specs:
+    psych (0.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -26,7 +32,6 @@ GEM
       multi_json (~> 1.0)
       multi_xml (~> 0.5)
       rack (~> 1.2)
-    psych (2.0.0)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
@@ -49,6 +54,6 @@ DEPENDENCIES
   maruku
   mongo
   oauth2
-  psych
+  psych (= 0.0.0)!
   shotgun
   sinatra

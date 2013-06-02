@@ -6,6 +6,6 @@ gem 'bson_ext'
 gem 'oauth2'
 gem 'json'
 gem 'haml'
-gem 'psych'
+gem 'psych', '0.0.0', git: 'git://github.com/tenderlove/psych.git'
 
 gem 'shotgun'
