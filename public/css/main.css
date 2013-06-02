@@ -1,0 +1,133 @@
+body {
+  background: #e3e2de;
+}
+#main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2em 0;
+  background: url('../img/index_front_blue_300dpi.png') no-repeat 0 5em #fff;
+}
+
+/* Typeography */
+body { font-family: "proxima-nova", "Helvetica Neue", sans-serif; font-size: 16px;}
+p { font-family: "proxima-nova", "Helvetica Neue", sans-serif; font-size: 0.9em; line-height: 1.5em; font-weight: 400;}
+h1, h2, h3, h4, h5 {font-family: "proxima-nova", "Helvetica Neue", sans-serif; font-weight: 500;}
+h1 {font-size: 3.5em; line-height: 1em; margin-bottom: 0.25em;}
+
+/* General Link Styles and Colors */
+a {
+  color: #3A53A8;
+}
+a:hover {
+  color: #3A53A8;
+  text-decoration: underline;
+}
+a:visited {
+  color: #ccc;
+}
+a:visited:hover {
+  color: #3A53A8;
+}
+
+/* Navbar Styles */
+.navbar {
+  margin: 0.5em 0 3em;
+}
+.navbar .brand {
+  color: #000;
+}
+.navbar .navbar-inner {
+  background: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-left: 2px solid #000;
+}
+.navbar .nav > li > a {
+  text-shadow: none;
+}
+.navbar .nav > li > a:hover {
+  color: #3A53A8;
+}
+
+/* Mailchimp Signup */
+#mc_embed_signup{
+  background:none; 
+  font:14px "proxima-nova", "Helvetica Neue", sans-serif; 
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+#mce-EMAIL {
+  background-color: #fff;
+  border: 1px solid #e3e2de;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+#mc-embedded-subscribe {
+  background-color: #e3e2de;
+  border: none;
+  padding: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Home page style */
+.lead p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+/* Events page styles */
+.event-time {
+  border-bottom: 1px dotted #3A53A8;
+  margin: 0 0 0.75em;
+  clear: both;
+  display: block;
+  font-size: 0.8em;
+}
+article {
+  margin-top: 1em;
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  body {
+    background: url('../img/index_front_blue_300dpi.png') no-repeat 0 12em;
+  }
+  #main {
+    padding: 0;
+  }
+  .lead {
+    font-size: 1em;
+    line-height: 1.25;
+  }
+  .navbar {
+    margin-top: -2em;
+    background: none;
+  }
+  .navbar .nav {
+    clear: both;
+    float: none;
+  }
+  .navbar .nav > li {
+    clear: both;
+    float: none;
+  }
+}

@@ -1,8 +1,11 @@
-source :rubyforge
+source 'https://rubygems.org'
+gem 'maruku'
 gem 'sinatra'
 gem 'mongo'
 gem 'bson_ext'
 gem 'oauth2'
 gem 'json'
+gem 'haml'
+gem 'psych'
 
 gem 'shotgun'

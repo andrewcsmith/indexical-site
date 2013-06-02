@@ -1,0 +1,5 @@
+%article{:id => @event[:meta]["slug"]}
+  %h1= @event[:meta]["title"]
+  %time.event-time{:datetime => @event[:meta]['time']}= @event[:meta]["time"].strftime("%b. %-d, %Y at %-I %P")
+  :markdown
+    #{@event[:body]}

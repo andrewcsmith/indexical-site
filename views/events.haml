@@ -1,0 +1,31 @@
+%h1 Transient Series, Vol. II
+
+- if @future_events.empty?
+  %p No future events. Check back soon.
+  
+- else 
+  - @future_events.each do |slug, event|
+    - event_link = "event/" + slug
+    %article{:id => slug}
+      %a{:href => event_link}
+        %h2= event[:meta]["title"]
+      %div.event-time
+        %time{:datetime => event[:meta]['time']}= event[:meta]["time"].strftime("%A %b. %-d, %Y, %-I %P")
+        at
+        %strong= event[:meta]["venue"]
+      :markdown
+        #{event[:body].split("\n\n")[0]}
+      %p.text-right
+        %a.read-more{:href => event_link} 
+          %i.icon-forward
+          read more.
+
+%p 
+  %a{:href => "/events/past", :title => "Past Events"}View past events
+        
+:markdown
+  ##Submissions
+
+  Transient Series is always interested in hearing about and possibly
+  presenting new work. [E-mail Andrew to talk about
+  it.](mailto:andrew@indexical.org)

@@ -1,0 +1,16 @@
+%h1 Past Events
+
+- @past_events.each do |slug, event|
+  - event_link = "event/" + slug
+  %article{:id => slug}
+    %a{:href => event_link}
+      %h3= event[:meta]["title"]
+    %div.event-time
+      %time{:datetime => event[:meta]['time']}= event[:meta]["time"].strftime("%A %b. %-d, %Y, %-I %P")
+      = ", at " + event[:meta]["venue"]
+    :markdown
+      #{event[:body].split("\n\n")[0]}
+    %p
+      %a.read-more{:href => event_link} 
+        %i.icon-forward
+        read more.
