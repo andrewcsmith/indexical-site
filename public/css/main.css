@@ -117,10 +117,11 @@ section {
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
   body {
-    background: url('../img/index_front_blue_300dpi.png') no-repeat 0 12em;
+    background: none;
   }
   #main {
     padding: 0;
+    background: url('../img/index_front_blue_300dpi.png') no-repeat 0 12em #fff;
   }
   .lead {
     font-size: 1em;
@@ -137,5 +138,9 @@ and (max-device-width : 480px) {
   .navbar .nav > li {
     clear: both;
     float: none;
+  }
+  img.event-header {
+    width: 280px;
+    height: auto;
   }
 }

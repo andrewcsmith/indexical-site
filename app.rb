@@ -80,7 +80,6 @@ def parse_event file
   meta["time"] = DateTime.parse(meta["time"])
   meta["slug"] = File.basename file, ".md"
   body = lines[1...lines.length].join("\n\n")
-  puts meta["image"]
   if meta["image"] && File.exists?("./public/img/events/" + meta["image"])
     meta["image url"] = "/img/events/" + meta["image"]
   end
