@@ -17,10 +17,10 @@
         %img.event-header{:src => event[:meta]["image url"]}
       :markdown
         #{event[:body].split("\n\n")[0]}
-      %p.text-right
+      %p
         %a.read-more{:href => event_link} 
-          %i.icon-forward
           read more.
+          %i.icon-forward
 
 %section
   %p
