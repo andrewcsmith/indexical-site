@@ -26,7 +26,7 @@ GEM
       multi_json (~> 1.0)
       multi_xml (~> 0.5)
       rack (~> 1.2)
-    psych (~> 0.0.0)
+    psych (2.0.0)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
@@ -49,6 +49,6 @@ DEPENDENCIES
   maruku
   mongo
   oauth2
-  psych (>= 0.0.0)
+  psych
   shotgun
   sinatra

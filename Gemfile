@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.0.0"
 gem 'maruku'
 gem 'sinatra'
 gem 'mongo'
@@ -6,6 +7,6 @@ gem 'bson_ext'
 gem 'oauth2'
 gem 'json'
 gem 'haml'
-gem 'psych', '>=0.0.0'
+gem 'psych'
 
 gem 'shotgun'
