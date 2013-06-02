@@ -1,5 +1,10 @@
 %article{:id => @event[:meta]["slug"]}
   %h1= @event[:meta]["title"]
-  %time.event-time{:datetime => @event[:meta]['time']}= @event[:meta]["time"].strftime("%b. %-d, %Y at %-I %P")
+  %div.event-time
+    %time{:datetime => @event[:meta]['time']}= @event[:meta]["time"].strftime("%A %b. %-d, %Y, %-I %P")
+    at
+    %strong= @event[:meta]["venue"]
+  - if @event[:meta].has_key? "image url"
+    %img.event-header{:src => @event[:meta]["image url"]}
   :markdown
     #{@event[:body]}

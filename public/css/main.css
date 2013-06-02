@@ -103,6 +103,14 @@ a:visited:hover {
 }
 article {
   margin-top: 1em;
+  clear: both;
+}
+section {
+  clear: both;
+}
+.event-header {
+  float: left;
+  margin: 0 1em 1em 0;
 }
 
 @media only screen

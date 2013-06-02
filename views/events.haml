@@ -13,6 +13,8 @@
         %time{:datetime => event[:meta]['time']}= event[:meta]["time"].strftime("%A %b. %-d, %Y, %-I %P")
         at
         %strong= event[:meta]["venue"]
+      - if event[:meta].has_key? "image url"
+        %img.event-header{:src => event[:meta]["image url"]}
       :markdown
         #{event[:body].split("\n\n")[0]}
       %p.text-right
@@ -20,12 +22,13 @@
           %i.icon-forward
           read more.
 
-%p 
-  %a{:href => "/events/past", :title => "Past Events"}View past events
+%section
+  %p
+    %a{:href => "/events/past", :title => "Past Events"}View past events
         
-:markdown
-  ##Submissions
-
-  Transient Series is always interested in hearing about and possibly
-  presenting new work. [E-mail Andrew to talk about
-  it.](mailto:andrew@indexical.org)
+%section
+  %h2 Submissions
+  :markdown
+  
+    Transient Series is always interested in hearing about and possibly
+    presenting new work. E-mail andrew at indexical dot org to discuss.
