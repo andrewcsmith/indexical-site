@@ -36,9 +36,6 @@ a:visited:hover {
 .navbar {
   margin: 0.5em 0 0.5em;
 }
-.navbar .brand {
-  color: #000;
-}
 .navbar .navbar-inner {
   background: none;
   -webkit-border-radius: 0;
@@ -50,7 +47,9 @@ a:visited:hover {
   border-left: 2px solid #000;
 }
 .navbar .nav > li > a {
+  padding-top: 4px;
   text-shadow: none;
+  color: #333;
 }
 .navbar .nav > li > a:hover {
   color: #3A53A8;
