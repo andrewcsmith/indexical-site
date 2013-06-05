@@ -9,7 +9,6 @@
     %time{:datetime => event[:meta]['time']}= event[:meta]["time"].strftime("%A %b. %-d, %Y, %-I %P")
     at
     = event[:meta]["venue"]
-    / Render both ticket price and link if they're available, but not if the event has passed.
     - if (event[:meta].has_key? "ticket price") && (event[:meta].has_key? "ticket link") && (!defined?(past) || !past)
       =" | #{event[:meta]["ticket price"]}: "
       %a{:href => event[:meta]["ticket link"]}Buy Tickets
@@ -21,11 +20,13 @@
     :markdown
       #{event[:body].split("\n\n")[0]}
     %p.pull-right
-      %a.read-more{:href => event_link} 
+      %a.read-more{:href => event_link + "#more"} 
         Read more
   - else
     :markdown
-      #{event[:body]}
+      #{event[:body].split("\n\n")[0]}
+      
+      <a id="more"> </a>#{event[:body].split("\n\n")[1..-1].join("\n\n")}
     %p.pull-right
       - if defined?(past) && past
         %a{:href => '/events/past'} Back to past events

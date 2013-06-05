@@ -142,10 +142,10 @@ section {
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
   body {
-    background: none;
+/*    background: none;*/
   }
   h1 {
-    font-size: 2.0em;
+    font-size: 1.75em;
   }
   h2 {
     font-size: 1.5em;
@@ -170,11 +170,18 @@ and (max-device-width : 480px) {
     width: 280px;
     height: auto;
   }
+  .gallery {
+    max-width: 320px;
+  }
+  .gallery img {
+    max-width: 80px;
+    padding-right: 10px;
+  }
   #mc_embed_signup{
   }
   #mce-EMAIL {
     margin-top: 1em;
-    width: 100%;
+    width: 270px;
   }
   #mc-embedded-subscribe {
     float: right;
