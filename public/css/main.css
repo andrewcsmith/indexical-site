@@ -91,6 +91,7 @@ a:visited:hover {
 #mce-EMAIL {
   background-color: #fff;
   border: 1px solid #f5f4f0;
+  font:14px "proxima-nova", "Helvetica Neue", sans-serif; 
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -101,6 +102,7 @@ a:visited:hover {
 #mc-embedded-subscribe {
   background-color: #fff;
   border: none;
+  font:14px "proxima-nova", "Helvetica Neue", sans-serif; 
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -167,5 +169,14 @@ and (max-device-width : 480px) {
   img.event-header {
     width: 280px;
     height: auto;
+  }
+  #mc_embed_signup{
+  }
+  #mce-EMAIL {
+    margin-top: 1em;
+    width: 100%;
+  }
+  #mc-embedded-subscribe {
+    float: right;
   }
 }
