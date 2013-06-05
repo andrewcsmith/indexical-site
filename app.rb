@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/partial'
 require 'oauth2'
 require 'json'
 require 'haml'
@@ -12,12 +13,12 @@ end
 
 get '/events' do
   @future_events = get_events :order => :ascending, :relative => :future
-  haml :events
+  haml :events, :locals => {:archive => true}
 end
 
 get '/events/past' do
   @past_events = get_events :order => :descending, :relative => :past
-  haml :past
+  haml :past, :locals => {:archive => true}
 end
 
 get '/releases' do
@@ -28,11 +29,27 @@ get '/event/:slug' do
   @events = get_events :type => :hash
   if @events.has_key? params[:slug]
     @event = @events[params[:slug]]
-    haml :event
+    haml :event, :locals => {:event => @event, :archive => false}
   else
     @event = nil
-    haml :no_event
+    haml :no_event, :locals => {:event => @event}
   end
+end
+
+def get_nav
+  active = request.path_info
+  nav = JSON.parse File.read('./data/nav.json')
+  print nav.inspect
+  nav.each do |title, meta|
+    if meta["href"] == active
+      if nav[title].has_key? "class"
+        nav[title]["class"] << "active"
+      else
+        nav[title]["class"] = ["active"]
+      end
+    end
+  end
+  nav
 end
 
 def get_events opts = {}

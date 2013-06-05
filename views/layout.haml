@@ -31,14 +31,7 @@
     .container-fluid#main
       .navbar.container-fluid#main-nav
         .navbar-inner
-          %ul.nav
-            %li
-              %a(href="/") Indexical
-            %li 
-              %a(href="/events") Events
-            %li 
-              %a(href="/releases") Releases
-              
+          = partial :nav, :locals => { :nav => get_nav }
           #mc_embed_signup.pull-right
             %form(action="http://indexical.us6.list-manage1.com/subscribe/post?u=1f39e09ab80e1acb3a57084f4&amp;id=d566c1714e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
               %input(type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required)

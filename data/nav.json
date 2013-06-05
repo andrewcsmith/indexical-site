@@ -1,0 +1,11 @@
+{
+  "Indexical": {
+    "href": "/"
+  },
+  "Events": {
+    "href": "/events"
+  },
+  "Releases": {
+    "href": "/releases"
+  }
+}

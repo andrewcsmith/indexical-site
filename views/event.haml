@@ -1,10 +1,19 @@
-%article{:id => @event[:meta]["slug"]}
-  %h1= @event[:meta]["title"]
+%article{:id => event[:meta]["slug"]}
+  - event_link = "event/" + event[:meta]["slug"]
+  %h1= event[:meta]["title"]
   %div.event-time
-    %time{:datetime => @event[:meta]['time']}= @event[:meta]["time"].strftime("%A %b. %-d, %Y, %-I %P")
+    %time{:datetime => event[:meta]['time']}= event[:meta]["time"].strftime("%A %b. %-d, %Y, %-I %P")
     at
-    %strong= @event[:meta]["venue"]
-  - if @event[:meta].has_key? "image url"
-    %img.event-header{:src => @event[:meta]["image url"]}
-  :markdown
-    #{@event[:body]}
+    %strong= event[:meta]["venue"]
+  - if event[:meta].has_key? "image url"
+    %img.event-header{:src => event[:meta]["image url"]}
+  - if defined? archive && archive
+    :markdown
+      #{event[:body].split("\n\n")[0]}
+    %p
+      %a.read-more{:href => event_link} 
+        read more.
+  - else
+    :markdown
+      #{event[:body]}
+  

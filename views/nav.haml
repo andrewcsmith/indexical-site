@@ -1,0 +1,4 @@
+%ul.nav
+  - nav.each do |title, meta|
+    %li
+      %a{:href => meta["href"], :class => meta["class"]}= title
