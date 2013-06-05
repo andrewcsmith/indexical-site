@@ -48,7 +48,8 @@ def get_nav
   active = request.path_info
   nav = JSON.parse File.read('./data/nav.json')
   nav.each do |title, meta|
-    if meta["href"] == active
+    ((active != "/") && (meta["href"] == "/")) ? next : false
+    if active.match /^#{meta["href"]}?/
       if nav[title].has_key? "class"
         nav[title]["class"] << "active"
       else

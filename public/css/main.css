@@ -7,17 +7,20 @@ body {
   padding: 0;
 }
 ::selection {
-  background: #f5f4f0;
+  background: rgb(105, 105, 105);
 }
 hr {
     border: 0;
-    height: 3px;
+    height: 2px;
     background: #666;
     margin: 1em auto;
 }
 .gallery {
   clear: both;
   display: block;
+}
+.gallery img {
+  padding-bottom: 20px;
 }
 .gallery img.pull-left {
   padding-right: 20px;
@@ -67,15 +70,17 @@ a:visited:hover {
   text-shadow: none;
   color: #333;
 }
-.navbar .nav > li > a:first-child {
-  padding-left: 0;
-}
 .navbar .nav > li > a:hover {
   color: #3A53A8;
 }
 .navbar .nav > li > a.active {
   color: #3A53A8;
+  font-weight: bold;
 }
+.navbar .nav > li > a:first-child {
+  padding-left: 0;
+}
+
 
 /* Mailchimp Signup */
 #mc_embed_signup{
@@ -135,7 +140,9 @@ section {
 }
 .event-header {
   float: left;
-  margin: 0 1em 1em 0;
+  margin: 5px 1em 1em 0;
+  max-width: 320px;
+  height: auto;
 }
 
 @media only screen
