@@ -13,12 +13,12 @@ end
 
 get '/events' do
   @future_events = get_events :order => :ascending, :relative => :future
-  haml :events, :locals => {:archive => true}
+  haml :events
 end
 
 get '/events/past' do
   @past_events = get_events :order => :descending, :relative => :past
-  haml :past, :locals => {:archive => true}
+  haml :past
 end
 
 get '/releases' do
@@ -28,12 +28,20 @@ end
 get '/event/:slug' do
   @events = get_events :type => :hash
   if @events.has_key? params[:slug]
-    @event = @events[params[:slug]]
-    haml :event, :locals => {:event => @event, :archive => false}
+    event = @events[params[:slug]]
+    locals = {:event => event}
+    if event[:meta]["time"] < Date.today
+      locals[:past] = true
+    end
+    haml :event, :locals => locals
   else
-    @event = nil
-    haml :no_event, :locals => {:event => @event}
+    event = nil
+    haml :no_event, :locals => {:event => event}
   end
+end
+
+not_found do
+  haml :'404'
 end
 
 def get_nav

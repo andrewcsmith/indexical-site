@@ -1,24 +1,4 @@
 %h1 Past Events
 
 - @past_events.each do |slug, event|
-  - event_link = "event/" + slug
-  %article{:id => slug}
-    %a{:href => event_link}
-      %h2= event[:meta]["title"]
-    %div.event-meta
-      %time{:datetime => event[:meta]['time']}= event[:meta]["time"].strftime("%A %b. %-d, %Y, %-I %P")
-      at
-      = event[:meta]["venue"]
-      / Render both ticket price and link if they're available
-      - if (event[:meta].has_key? "ticket price") && (event[:meta].has_key? "ticket link")
-        =" | #{event[:meta]["ticket price"]}: "
-        %a{:href => event[:meta]["ticket link"]}Buy Tickets
-      - elsif event[:meta].has_key? "ticket price"
-        =" | #{event[:meta]["ticket price"]}"
-    - if event[:meta].has_key? "image url"
-      %img.event-header{:src => event[:meta]["image url"]}
-    :markdown
-      #{event[:body].split("\n\n")[0]}
-    %p
-      %a.read-more{:href => event_link} 
-        read more.
+  = partial :event, :locals => {:event => event, :archive => true, :past => true}

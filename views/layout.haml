@@ -21,7 +21,6 @@
         
     
     %script{:src => url('/js/vendor/modernizr-2.6.2.min.js')}
-    %script{:src => url('/js/vendor/backbone-min.js'), :type => "text/javascript"}
     %script{:src => url('/js/vendor/typekit.js'), :type => "text/javascript"}
     
   %body
@@ -32,9 +31,9 @@
       .navbar.container-fluid#main-nav
         .navbar-inner
           = partial :nav, :locals => { :nav => get_nav }
-          #mc_embed_signup.pull-right
+          #mc_embed_signup
             %form(action="http://indexical.us6.list-manage1.com/subscribe/post?u=1f39e09ab80e1acb3a57084f4&amp;id=d566c1714e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
-              %input(type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required)
+              %input(type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="we would like to email you" required)
               %input(type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button")
 
 

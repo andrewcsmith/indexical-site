@@ -1,19 +1,34 @@
 %article{:id => event[:meta]["slug"]}
-  - event_link = "event/" + event[:meta]["slug"]
-  %h1= event[:meta]["title"]
-  %div.event-time
+  - event_link = "/event/" + event[:meta]["slug"]
+  - if defined?(archive) && archive
+    %a{:href => event_link}
+      %h2= event[:meta]["title"]
+  - else
+    %h1= event[:meta]["title"]
+  %div.event-meta
     %time{:datetime => event[:meta]['time']}= event[:meta]["time"].strftime("%A %b. %-d, %Y, %-I %P")
     at
-    %strong= event[:meta]["venue"]
+    = event[:meta]["venue"]
+    / Render both ticket price and link if they're available, but not if the event has passed.
+    - if (event[:meta].has_key? "ticket price") && (event[:meta].has_key? "ticket link") && (!defined?(past) || !past)
+      =" | #{event[:meta]["ticket price"]}: "
+      %a{:href => event[:meta]["ticket link"]}Buy Tickets
+    - elsif event[:meta].has_key? "ticket price"
+      =" | #{event[:meta]["ticket price"]}"
   - if event[:meta].has_key? "image url"
     %img.event-header{:src => event[:meta]["image url"]}
-  - if defined? archive && archive
+  - if defined?(archive) && archive
     :markdown
       #{event[:body].split("\n\n")[0]}
-    %p
+    %p.pull-right
       %a.read-more{:href => event_link} 
         read more.
   - else
     :markdown
       #{event[:body]}
+    %p.pull-right
+      - if defined?(past) && past
+        %a{:href => '/events/past'} Back to past events
+      - else
+        %a{:href => '/events'} Back to events page
   

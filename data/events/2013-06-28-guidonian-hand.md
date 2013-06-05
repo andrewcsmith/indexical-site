@@ -2,15 +2,14 @@ title: "II.6: For Trombone Quartet & String Quartet"
 venue: Church of the Annunciation
 ticket price: $15
 time: 2013-06-28T20:00
+image: daniel-1.jpg
 
 The Guidonian Hand Trombone Quartet and Ensemble Indexical will perform new
 pieces for double quartet by composers Erik Carlson, Tyler Wilcox, and Andrew
 C. Smith, with *Daniel (1)* by Craig Shepard. The new pieces have been composed
-over the past months, with a workshop session at the halfway point for
-composers to try out new ideas, and to work directly with the performers on
-their pieces. This sustained engagement with the music over two months allows
-composers to develop their new works more fully, and performers to work on the
-techniques that the music calls for.
+over the past months, with a workshop session for composers to try ideas and
+work directly with the performers. This sustained engagement with the music
+over two months allows composers to develop their new works more fully.
 
 **The Guidonian Hand Trombone Quartet** (Mark Broschinsky, William Lang, James
 Rogers, and Sebastian Vera) is America’s leading modern trombone collective.

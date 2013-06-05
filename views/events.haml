@@ -2,38 +2,21 @@
 
 - if @future_events.empty?
   %p No future events. Check back soon.
-  
 - else 
   - @future_events.each do |slug, event|
-    - event_link = "event/" + slug
-    %article{:id => slug}
-      %a{:href => event_link}
-        %h2= event[:meta]["title"]
-      %div.event-meta
-        %time{:datetime => event[:meta]['time']}= event[:meta]["time"].strftime("%A %b. %-d, %Y, %-I %P")
-        at
-        = event[:meta]["venue"]
-        / Render both ticket price and link if they're available
-        - if (event[:meta].has_key? "ticket price") && (event[:meta].has_key? "ticket link")
-          =" | #{event[:meta]["ticket price"]}: "
-          %a{:href => event[:meta]["ticket link"]}Buy Tickets
-        - elsif event[:meta].has_key? "ticket price"
-          =" | #{event[:meta]["ticket price"]}"
-      - if event[:meta].has_key? "image url"
-        %img.event-header{:src => event[:meta]["image url"]}
-      :markdown
-        #{event[:body].split("\n\n")[0]}
-      %p
-        %a.read-more{:href => event_link} 
-          read more.
+    = partial :event, :locals => {:event => event, :archive => true}
 
 %section
-  %p
-    %a{:href => "/events/past", :title => "Past Events"}View past events
-        
-%section
-  %h2 Submissions
   :markdown
   
-    Transient Series is always interested in hearing about and possibly
-    presenting new work. E-mail andrew at indexical dot org to discuss.
+    ***
+    
+    ##Past Events
+    
+    Check out the [past Transient Series events](/events/past), from November 2011.
+
+    ***
+    
+    ##Submissions
+  
+    Transient Series is always interested in hearing about and possibly presenting new work. E-mail [&#097;&#110;&#100;&#114;&#101;&#119;&#064;&#105;&#110;&#100;&#101;&#120;&#105;&#099;&#097;&#108;&#046;&#111;&#114;&#103;](mailto:andrew@indexical.org)
