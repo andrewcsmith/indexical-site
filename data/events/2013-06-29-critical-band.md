@@ -11,7 +11,7 @@ The program includes James Tenney's (1934-2006) piece *Critical Band*, where thr
 ##Program
 James Tenney, *Critical Band*  
 Laura Steenberge, *Piriforms*  
-John Hastings, *White Noise*  
+John Hastings, *White (Vermont)*  
 
 intermission
 
