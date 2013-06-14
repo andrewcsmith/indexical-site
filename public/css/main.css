@@ -32,7 +32,7 @@ hr {
 /* Typeography */
 body { font-family: "proxima-nova", "Helvetica Neue", sans-serif; font-size: 20px;}
 p { font-family: "proxima-nova", "Helvetica Neue", sans-serif; font-size: 0.9em; line-height: 1.5em; font-weight: 400;}
-h1, h2, h3, h4, h5 {font-family: "proxima-nova", "Helvetica Neue", sans-serif; font-weight: 500;}
+h1, h2, h3, h4, h5 {font-family: "proxima-nova", "Helvetica Neue", sans-serif; font-weight: 600;}
 h1 {font-size: 3.5em; line-height: 1em; margin-bottom: 0.25em;}
 
 /* General Link Styles and Colors */
