@@ -1,6 +1,7 @@
 title: "II.7: Bandwidth"
 venue: Willow Place Auditorium (26 Willow Place, Brooklyn)
 ticket price: $10 donation
+ticket link: http://transientseriesii-7.brownpapertickets.com/
 time: 2013-06-29T20:00
 image: fraufraulein.jpg
 
@@ -9,12 +10,12 @@ image: fraufraulein.jpg
 The program includes James Tenney's (1934-2006) piece *Critical Band*, where through a simple numerical series, the piece slowly expands from a dense microtonal cluster into a harmonically resonant chord. This seminal work is presented alongside world premieres by Fraufraulein (Anne Guthrie & Billy Gomberg), John P. Hastings, and Brian Parks, with less-new works by Michael Winter and Laura Steenberge.
 
 ##Program
-James Tenney, *Critical Band*  
-Laura Steenberge, *Piriforms*  
-John Hastings, *White (Vermont)*  
+**James Tenney**, *Critical Band*  
+**Laura Steenberge**, *Piriforms*  
+**John Hastings**, *White (Vermont)*  
 
 intermission
 
-Michael Winter, *mass and band*  
-Brian Parks, *Stagger Canon for Eight Singers*  
-Guthrie/Gomberg, *Remarks on Color*  
+**Michael Winter**, *mass and band*  
+**Brian Parks**, *Stagger Canon for Eight Singers*  
+**Fraufraulein (Anne Guthrie / Billy Gomberg)**, *Remarks on Color*  
