@@ -1,5 +1,5 @@
 title: "II.6: For Trombone Quartet & String Quartet"
-venue: Church of the Annunciation
+venue: Church of the Annunciation (259 N. 5th St., Williamsburg)
 ticket price: $15
 ticket link: http://transientseriesii-6.brownpapertickets.com/
 time: 2013-06-28T20:00
@@ -28,7 +28,7 @@ string quartet with Rachel Golub & Mario Gotoh (violins), Victor Lowrie
 This event is supported by Our Lady of Mount Carmel Parish Williamsburg.
 
 ##Program
-**Erik Carlson**, new piece for double quartet  
+**Erik Carlson**, *Double Quartet*  
 **Tyler Wilcox**, new piece for tenor saxophone and double quartet  
 **Andrew C. Smith**, *all description all delay*  
 **Craig Shepard**, *Daniel (1)*
