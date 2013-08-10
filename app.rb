@@ -25,6 +25,10 @@ get '/releases' do
   haml :releases
 end
 
+get '/about' do
+  haml :about
+end
+
 get '/events?/:slug' do
   @events = get_events :type => :hash
   if @events.has_key? params[:slug]
@@ -44,6 +48,13 @@ not_found do
   haml :'404'
 end
 
+#################################################
+# Helper methods for retrieving lists of things #
+#################################################
+
+##
+# Navigation menu list
+
 def get_nav
   active = request.path_info
   nav = JSON.parse File.read('./data/nav.json')
@@ -59,6 +70,9 @@ def get_nav
   end
   nav
 end
+
+##
+# Event list
 
 def get_events opts = {}
   order = opts[:order]        || :ascending
@@ -98,6 +112,9 @@ def get_events opts = {}
     events
   end
 end
+
+##
+# Pull the YAML metadata out of the markdown document
 
 def parse_event file
   lines = File.readlines(file, "\n\n")
