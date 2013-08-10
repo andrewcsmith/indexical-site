@@ -8,24 +8,29 @@ require 'maruku'
 
 # Routes
 get '/' do
+  @page_title = "Indexical"
   haml :home
 end
 
 get '/events' do
+  @page_title = "Transient Series: Upcoming Events"
   @future_events = get_events :order => :ascending, :relative => :future
   haml :events
 end
 
 get '/events/past' do
+  @page_title = "Transient Series: Past Events"
   @past_events = get_events :order => :descending, :relative => :past
   haml :past
 end
 
 get '/releases' do
+  @page_title = "Releases"
   haml :releases
 end
 
 get '/about' do
+  @page_title = "About"
   haml :about
 end
 
@@ -37,6 +42,7 @@ get '/events?/:slug' do
     if event[:meta]["time"] < Date.today
       locals[:past] = true
     end
+    @page_title = "Transient Series | #{event[:meta]["title"]}"
     haml :event, :locals => locals
   else
     event = nil
