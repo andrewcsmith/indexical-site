@@ -25,7 +25,7 @@ get '/releases' do
   haml :releases
 end
 
-get '/event/:slug' do
+get '/events?/:slug' do
   @events = get_events :type => :hash
   if @events.has_key? params[:slug]
     event = @events[params[:slug]]

@@ -1,5 +1,5 @@
 %article{:id => event[:meta]["slug"]}
-  - event_link = "/event/" + event[:meta]["slug"]
+  - event_link = "/events/" + event[:meta]["slug"]
   - if defined?(archive) && archive
     %a{:href => event_link}
       %h2= event[:meta]["title"]
