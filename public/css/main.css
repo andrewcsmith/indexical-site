@@ -10,10 +10,10 @@ body {
   background: rgb(105, 105, 105);
 }
 hr {
-    border: 0;
-    height: 2px;
-    background: #666;
-    margin: 1em auto;
+  border: 0;
+  height: 2px;
+  background: #666;
+  margin: 1em auto;
 }
 .gallery {
   clear: both;
@@ -34,6 +34,7 @@ body { font-family: "proxima-nova", "Helvetica Neue", sans-serif; font-size: 20p
 p { font-family: "proxima-nova", "Helvetica Neue", sans-serif; font-size: 0.9em; line-height: 1.5em; font-weight: 400;}
 h1, h2, h3, h4, h5 {font-family: "proxima-nova", "Helvetica Neue", sans-serif; font-weight: 600;}
 h1 {font-size: 3.5em; line-height: 1em; margin-bottom: 0.25em;}
+h2 {font-size: 2.5em; line-height: 1em; margin-bottom: 0.25em;}
 
 /* General Link Styles and Colors */
 a {
@@ -124,12 +125,13 @@ a:visited:hover {
 }
 
 /* Events page styles */
-.event-meta {
+.event-meta, .release-meta {
   margin: 0 0 0.75em;
   clear: both;
   display: block;
   font-size: 0.9em;
   color: #666;
+  line-height: 1.5em;
 }
 article {
   margin-top: 1em;
@@ -138,7 +140,7 @@ article {
 section {
   clear: both;
 }
-.event-header {
+.event-header, .release-header {
   float: left;
   margin: 5px 1em 1em 0;
   max-width: 320px;
