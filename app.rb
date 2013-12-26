@@ -12,6 +12,8 @@ get '/' do
   haml :home
 end
 
+# Events routing
+
 get '/events' do
   @page_title = "Transient Series: Upcoming Events"
   @future_events = get_events :order => :ascending, :relative => :future
@@ -22,16 +24,6 @@ get '/events/past' do
   @page_title = "Transient Series: Past Events"
   @past_events = get_events :order => :descending, :relative => :past
   haml :past
-end
-
-get '/releases' do
-  @page_title = "Releases"
-  haml :releases
-end
-
-get '/about' do
-  @page_title = "About"
-  haml :about
 end
 
 get '/events?/:slug' do
@@ -48,6 +40,35 @@ get '/events?/:slug' do
     event = nil
     haml :no_event, :locals => {:event => event}
   end
+end
+
+# Releases routing
+
+get '/releases' do
+  @page_title = "Releases"
+  # get_releases should by default return all releases in ascending order
+  @releases = get_releases :order => :descending
+  haml :releases
+end
+
+get '/releases?/:slug' do
+  @releases = get_releases :type => :hash
+  if @releases.has_key? params[:slug]
+    release = @releases[params[:slug]]
+    locals = {:release => release}
+    @page_title = "Indexical Releases | #{release[:meta]["title"]}"
+    haml :release, :locals => locals
+  else
+    release = nil
+    haml :no_release
+  end
+end
+
+# About routing
+
+get '/about' do
+  @page_title = "About"
+  haml :about
 end
 
 not_found do
@@ -120,6 +141,37 @@ def get_events opts = {}
 end
 
 ##
+# Releases list
+
+def get_releases opts = {}
+  order = opts[:order]        || :ascending
+  type = opts[:type]          || :array
+  releases = {}
+  Dir.glob('./data/releases/*') do |file|
+    release = parse_release file
+    releases[release[:meta]["slug"]] = release
+  end
+  
+  # Handle the sorting
+  releases = case order
+  when :descending
+    releases.sort_by {|k, v| v[:meta]["time"]}.reverse
+  when :ascending
+    releases.sort_by {|k, v| v[:meta]["time"]}
+  end
+  
+  # Return either Hash or Array
+  case type
+  when :hash
+    releases_hash = {}
+    releases.each {|e| releases_hash[e[0]] = e[1]}
+    releases_hash
+  when :array
+    releases
+  end
+end
+
+##
 # Pull the YAML metadata out of the markdown document
 
 def parse_event file
@@ -130,6 +182,18 @@ def parse_event file
   body = lines[1...lines.length].join("\n\n")
   if meta["image"] && File.exists?("./public/img/events/" + meta["image"])
     meta["image url"] = "/img/events/" + meta["image"]
+  end
+  {:meta => meta, :body => body}
+end
+
+def parse_release file
+  lines = File.readlines(file, "\n\n")
+  meta = YAML.load lines[0]
+  meta["time"] = DateTime.parse(meta["time"])
+  meta["slug"] = File.basename file, ".md"
+  body = lines[1...lines.length].join("\n\n")
+  if meta["image"] && File.exists?("./public/img/releases/" + meta["image"])
+    meta["image url"] = "/img/releases/" + meta["image"]
   end
   {:meta => meta, :body => body}
 end

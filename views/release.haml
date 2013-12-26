@@ -1,0 +1,25 @@
+%article{:id => release[:meta]["slug"]}
+  - release_link = "/releases/" + release[:meta]["slug"]
+  - if defined?(archive) && archive
+    %a{:href => release_link}
+      %h2= release[:meta]["title"]
+  - else
+    %h1= release[:meta]["title"]
+  %div.event-meta
+  - if release[:meta].has_key? "purchase"
+    %a{:href => release[:meta]["purchase"]} Buy online
+  - if release[:meta].has_key? "image url"
+    %img.event-header{:src => release[:meta]["image url"]}
+  - if defined?(archive) && archive
+    :markdown
+      #{release[:body].split("\n\n")[0]}
+    %p.pull-right
+      %a.read-more{:href => release_link + "#more"}
+        Read more
+  - else
+    :markdown
+      #{release[:body].split("\n\n")[0]}
+      <a id="more"> </a>#{release[:body].split("\n\n")[1..-1].join("\n\n")}
+  %p.pull-right
+    %a{:href => '/releases'} Back to releases page
+  
