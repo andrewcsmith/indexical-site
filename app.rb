@@ -45,7 +45,7 @@ end
 # Releases routing
 
 get '/releases' do
-  @page_title = "Releases"
+  @page_title = "Indexical Releases"
   # get_releases should by default return all releases in ascending order
   @releases = get_releases :order => :descending
   haml :releases
