@@ -5,24 +5,29 @@
       %h2= release[:meta]["title"]
   - else
     %h1= release[:meta]["title"]
-  %div.release-meta
-    - if release[:meta].has_key? "tagline"
-      = release[:meta]["tagline"] 
-    - if release[:meta].has_key?("tagline") && release[:meta].has_key?("purchase")
+  .release-meta
+    - if release[:meta].has_key? "media"
+      = release[:meta]["media"] 
+    - if release[:meta].has_key?("media") && release[:meta].has_key?("purchase url")
       = "|"
-    - if release[:meta].has_key? "purchase"
-      %a{:href => release[:meta]["purchase"]} Buy online
-  - if release[:meta].has_key? "image url"
-    %img.release-header{:src => release[:meta]["image url"]}
-  - if defined?(archive) && archive
-    :markdown
-      #{release[:body].split("\n\n")[0]}
-    %p.pull-right
-      %a.read-more{:href => release_link + "#more"}
-        Read more
-  - else
-    :markdown
-      #{release[:body].split("\n\n")[0]}
-      <a id="more"> </a>#{release[:body].split("\n\n")[1..-1].join("\n\n")}
-    %p.pull-right
-      %a{:href => '/releases'} Back to releases page
+    - if release[:meta].has_key? "purchase url"
+      %a{:href => release[:meta]["purchase url"]} Buy online
+  .row
+    .span4
+      - if release[:meta].has_key? "image url"
+        %img.release-header{:src => release[:meta]["image url"]}
+      - unless defined?(archive) && archive
+        .tracklist= render_tracklist(release[:meta]["tracklist"])
+    .span6
+      - if defined?(archive) && archive
+        :markdown
+          #{release[:body].split("\n\n")[0]}
+        %p.pull-right
+          %a.read-more{:href => release_link + "#more"}
+            Read more
+      - else
+        :markdown
+          #{release[:body].split("\n\n")[0]}
+          <a id="more"> </a>#{release[:body].split("\n\n")[1..-1].join("\n\n")}
+        %p.pull-right
+          %a{:href => '/releases'} Back to releases page
