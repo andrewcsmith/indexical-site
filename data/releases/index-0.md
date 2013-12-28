@@ -1,8 +1,26 @@
 title: "Index 0"
-tagline: "Music by Elizabeth Adams, Jack Callahan, Stephanie Huguenin, Beau Sievers, Andrew C. Smith, and K.C.M. Walker. Performances by String Noise (Conrad Harris and Pauline Kim Harris), Dov Scheindlin, Brian Snow, and Andrew C. Smith."
-time: 2013-06-30T00:00
+time: "2013-06-30"
 image: index-0.jpg
-purchase: http://indexical.bandcamp.com
+media: "12&rdquo; double-LP in letterpressed foldover packaging (edition of 500) | digital download"
+tracklist: 
+  - composer: Beau Sievers
+    title: 
+      - Distance Etude 1
+      - Distance Etude 2
+      - Distance Etude 3
+  - composer: Elizabeth Adams
+    title: CUSP (the music for the noise)
+  - composer: K.C.M. Walker
+    title: precessional
+  - composer: Jack Callahan
+    title: Edge of Intention (I)
+  - composer: Stephanie Huguenin
+    title: Para-ll-el
+  - composer: Andrew C. Smith
+    title:
+      - Topology (contriving balance)
+      - Topology (phases of this difference)
+purchase url: http://indexical.bandcamp.com
 
 ***Index 0***, **the first release by Indexical**, is now in print as a
 double-LP set and digital download. The record contains new pieces for two
@@ -12,15 +30,9 @@ out of a desire to provide context and support for one another's work, and was
 funded through pooled resources and a successful
 [Kickstarter](http://www.kickstarter.com/projects/1108228312/index-0-a-double-lp-of-new-experimental-music) campaign.
 
-**Beau Sievers**, *Distance Etude No. 1*  
-**Beau Sievers**, *Distance Etude No. 2*  
-**Beau Sievers**, *Distance Etude No. 3*  
-**Elizabeth Adams**, *CUSP (the music for the noise)*  
-**K.C.M. Walker**, *precessional*  
-**Jack Callahan**, *Edge of Intention (I)*  
-**Stephanie Huguenin**, *Para-ll-el*  
-**Andrew C. Smith**, *Topology (contriving balance)*  
-**Andrew C. Smith**, *Topology (phases of this difference)*
+<iframe style="border: 0; width: 100%; height: 120px;" src="http://bandcamp.com/EmbeddedPlayer/album=773000415/size=medium/bgcol=ffffff/linkcol=333333/artwork=false/transparent=true/">
+  <a href="http://indexical.bandcamp.com/album/index-0">Index 0 by Indexical</a>
+</iframe>
 
 Recorded by Alexis Berthelot at Studio G and Benzaquen Hall, DiMenna Center for
 Classical Music. Edited and mixed by Beau Sievers at the Bregman Music and
