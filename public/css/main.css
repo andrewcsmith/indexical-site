@@ -140,11 +140,23 @@ article {
 section {
   clear: both;
 }
-.event-header, .release-header {
+.event-header {
   float: left;
   margin: 5px 1em 1em 0;
   max-width: 320px;
   height: auto;
+}
+img.release-header {
+  max-width: 100%;
+}
+.tracklist {
+  font-size: 0.75em;
+}
+.no-border td {
+  border: none;
+}
+.table-no-border tr:hover {
+  background-color: auto;
 }
 
 @media only screen

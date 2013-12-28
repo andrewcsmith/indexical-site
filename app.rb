@@ -197,3 +197,17 @@ def parse_release file
   end
   {:meta => meta, :body => body}
 end
+
+def render_tracklist tracklist
+  output_string = "<table class=\"table no-border\">"
+  tracklist.each do |track|
+    output_string << "<tr><td><strong>" << track["composer"] << "</strong></td>"
+    if track["title"].respond_to? :join
+      output_string << "<td><em>" << track["title"].join("<br />") << "</em></td>"
+    else
+      output_string << "<td><em>" << track["title"] << "</em></td>"
+    end
+    output_string << "</tr>"
+  end
+  output_string << "</table>"
+end
