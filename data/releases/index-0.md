@@ -1,7 +1,7 @@
 title: "Index 0"
 time: "2013-06-30"
 image: index-0.jpg
-media: "12&rdquo; double-LP in letterpressed foldover packaging (edition of 500) | digital download"
+media: "12&rdquo; double-LP in letterpressed foldover packaging (edition of 500) + digital download"
 tracklist: 
   - composer: Beau Sievers
     title: 

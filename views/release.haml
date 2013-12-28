@@ -6,12 +6,12 @@
   - else
     %h1= release[:meta]["title"]
   .release-meta
-    - if release[:meta].has_key? "media"
-      = release[:meta]["media"] 
-    - if release[:meta].has_key?("media") && release[:meta].has_key?("purchase url")
-      = "|"
     - if release[:meta].has_key? "purchase url"
       %a{:href => release[:meta]["purchase url"]} Buy online
+    - if release[:meta].has_key?("media") && release[:meta].has_key?("purchase url")
+      = "|"
+    - if release[:meta].has_key? "media"
+      = release[:meta]["media"]
   .row
     .span4
       - if release[:meta].has_key? "image url"
