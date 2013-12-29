@@ -27,8 +27,7 @@ pieces for two violins, string quartet, solo piano, and fixed-media
 electronics, recorded in August 2012 and May 2013 in Brooklyn and New York
 City. The project was born out of a desire to provide context and support for
 one another's work, and was funded through pooled resources and a successful
-[Kickstarter](http://www.kickstarter.com/projects/1108228312/index-0-a-double-lp
--of-new-experimental-music) campaign.
+[Kickstarter](http://www.kickstarter.com/projects/1108228312/index-0-a-double-lp-of-new-experimental-music) campaign.
 
 <iframe style="border: 0; width: 100%; height: 120px;" src="http://bandcamp.com/EmbeddedPlayer/album=773000415/size=medium/bgcol=ffffff/linkcol=333333/artwork=false/transparent=true/">
   <a href="http://indexical.bandcamp.com/album/index-0">Index 0 by Indexical</a>
