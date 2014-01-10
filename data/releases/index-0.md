@@ -29,7 +29,7 @@ City. The project was born out of a desire to provide context and support for
 one another's work, and was funded through pooled resources and a successful
 [Kickstarter](http://www.kickstarter.com/projects/1108228312/index-0-a-double-lp-of-new-experimental-music) campaign.
 
-<iframe style="border: 0; width: 400px; height: 439px;" src="http://bandcamp.com/EmbeddedPlayer/album=773000415/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/">
+<iframe style="border: 0; width: 100%; height: 439px;" src="http://bandcamp.com/EmbeddedPlayer/album=773000415/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/">
   <a href="http://indexical.bandcamp.com/album/index-0">Index 0 by Indexical</a>
 </iframe>
 
