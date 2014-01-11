@@ -2,6 +2,8 @@ title: "Index 0"
 time: "2013-06-30"
 image: index-0.jpg
 media: "12&rdquo; double-LP in letterpressed foldover packaging (edition of 500) + digital download"
+bc album link: "http://indexical.bandcamp.com/album/index-0"
+bc album number: "773000415"
 tracklist: 
   - composer: Beau Sievers
     title: 
@@ -28,10 +30,6 @@ electronics, recorded in August 2012 and May 2013 in Brooklyn and New York
 City. The project was born out of a desire to provide context and support for
 one another's work, and was funded through pooled resources and a successful
 [Kickstarter](http://www.kickstarter.com/projects/1108228312/index-0-a-double-lp-of-new-experimental-music) campaign.
-
-<iframe style="border: 0; width: 100%; height: 439px;" src="http://bandcamp.com/EmbeddedPlayer/album=773000415/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/">
-  <a href="http://indexical.bandcamp.com/album/index-0">Index 0 by Indexical</a>
-</iframe>
 
 Recorded by Alexis Berthelot at Studio G and Benzaquen Hall, DiMenna Center for
 Classical Music. Edited and mixed by Beau Sievers at the Bregman Music and
