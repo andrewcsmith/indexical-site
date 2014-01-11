@@ -158,6 +158,10 @@ img.release-header {
 .table-no-border tr:hover {
   background-color: auto;
 }
+/* Typekit: No Flash of Unstyled Text */
+.wf-loading {
+  visibility: hidden;
+}
 
 @media only screen
 and (min-device-width : 320px)
