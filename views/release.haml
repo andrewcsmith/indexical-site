@@ -14,20 +14,19 @@
     - if release[:meta].has_key? "media"
       = release[:meta]["media"]
   .row
-    .span4
-      / - if release[:meta].has_key? "image url"
-      /   %img.release-header{:src => release[:meta]["image url"]}
-      / - unless defined?(archive) && archive
-      /   .tracklist= render_tracklist(release[:meta]["tracklist"])
-      
+    .span4      
       - if defined?(archive) && archive
         - if (release[:meta].has_key? "bc album number") && (release[:meta].has_key? "bc album link")
           %iframe{:style => "border: 0; width: 100%; height: 300px;", :src => "http://bandcamp.com/EmbeddedPlayer/album=#{release[:meta]["bc album number"]}/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true", :seamless => ""}
             %a{:href => release[:meta]["bc album link"], :onClick => "trackOutboundLink(this, 'Bandcamp Links', 'indexical.bandcamp.com'); return false;"}= release[:meta]["title"]
       - else
         - if (release[:meta].has_key? "bc album number") && (release[:meta].has_key? "bc album link")
-          %iframe{:style => "border: 0; width: 100%; height: 600px;", :src => "http://bandcamp.com/EmbeddedPlayer/album=#{release[:meta]["bc album number"]}/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true",  :seamless => ""}
+          %iframe{:style => "border: 0; width: 100%; height: 300px;", :src => "http://bandcamp.com/EmbeddedPlayer/album=#{release[:meta]["bc album number"]}/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true",  :seamless => ""}
             %a{:href => release[:meta]["bc album link"], :onClick => "trackOutboundLink(this, 'Bandcamp Links', 'indexical.bandcamp.com'); return false;"}= release[:meta]["title"]
+
+      - unless defined?(archive) && archive
+        .tracklist= render_tracklist(release[:meta]["tracklist"])
+
     .span6
       - if defined?(archive) && archive
         :markdown
