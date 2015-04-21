@@ -65,13 +65,6 @@ get '/releases?/:slug' do
   end
 end
 
-# About routing
-
-get '/about' do
-  @page_title = "About"
-  haml :about
-end
-
 not_found do
   haml :'404'
 end

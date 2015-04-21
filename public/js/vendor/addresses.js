@@ -5,6 +5,7 @@ function setAddr(name) {
 			case 'b': name += 'eau'; break;
 			case 'i': name += 'nfo'; break;
       case 'a': name += 'ndrew'; break;
+      case 'd': name += 'avid'; break;
 		}
 		var dmn = new Array('org','.','al','ic','dex','in').reverse().toString();
 		dmn = dmn.replace(/\,/g,'').replace(/(w)/g,'$1eb');
