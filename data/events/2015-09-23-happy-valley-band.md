@@ -37,5 +37,5 @@ seven-piece band with Alexander Dupuis (guitar), Beau Sievers (drums), Andrew
 Smith (piano), Mustafa Walker (bass), Conrad Harris (violin), Pauline Kim Harris
 (violin), and David Kant (saxophone), plus frequent special guests. The Happy
 Valley Band is performing west coast concert dates this spring, and will release
-a debut album this fall, *The World Does Not Need More Songs*, on Indexical.
+a debut album, *The World Does Not Need More Songs*, on Indexical.
 
