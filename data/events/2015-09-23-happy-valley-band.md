@@ -26,6 +26,10 @@ idiosyncratic scores.
 * 5/22 - Center for New Music, San Francisco - presented by sfSound
 * 5/23 - the wulf., Los Angeles - presented by Dog Star Orchestra
 
+### Listen!
+
+<object width="300" height="340"><param name="movie" value="http://freemusicarchive.org/swf/playlistplayer.swf"/><param name="flashvars" value="playlist=http://freemusicarchive.org/services/playlists/embed/album/11583.xml"/><param name="allowscriptaccess" value="sameDomain"/><embed type="application/x-shockwave-flash" src="http://freemusicarchive.org/swf/playlistplayer.swf" width="300" height="340" flashvars="playlist=http://freemusicarchive.org/services/playlists/embed/album/11583.xml" allowscriptaccess="sameDomain" /></object>
+
 ### About the Bandleader
 
 Directed by bandleader / composer David Kant, the Happy Valley Band is a
