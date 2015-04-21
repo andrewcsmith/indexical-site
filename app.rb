@@ -17,6 +17,7 @@ end
 get '/events' do
   @page_title = "Transient Series: Upcoming Events"
   @future_events = get_events :order => :ascending, :relative => :future
+  @past_events = get_events :order => :descending, :relative => :past
   haml :events
 end
 
@@ -106,7 +107,7 @@ def get_events opts = {}
   relative = opts[:relative]  || :all
   type = opts[:type]          || :array
   events = {}
-  Dir.glob('./data/events/*') do |file|
+  Dir.glob('./data/events/*[!~]') do |file|
     event = parse_event file
     events[event[:meta]["slug"]] = event
   end

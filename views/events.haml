@@ -2,30 +2,25 @@
 %section
   :markdown
   
-    The Transient Series began in Brooklyn in November 2011, at Willow Place
-    Auditorium. We've also held events as a part of the Incubator Arts
-    Project's music series, Littlefield, and the Church of the Annunciation.
-    Like the releases, the Transient Series focuses on composers and performers
-    who operate outside of major institutions of contemporary music. For
-    updates about the series, [join our mailing list](http://eepurl.com/tCefr).
+    The Transient Series focuses on composers and performers who operate outside
+    of major institutions of contemporary music. For updates about the series,
+    [join our mailing list](http://eepurl.com/tCefr).
+
+    Transient Series is always interested in hearing about and possibly
+    presenting new work. E-mail <a href="#" id="contactAddr-a"
+    onmouseover="setAddr('a')" onfocus="setAddr('a')">Andrew</a> if you're
+    interested.
 
 - if @future_events.empty?
-  %p No future events. Check back soon.
+  %p No future events&mdash;but here are some of the things we've done in the past:
+  - @past_events.each do |slug, event|
+    = partial :event, :locals => {:event => event, :archive => true}
 - else 
   - @future_events.each do |slug, event|
     = partial :event, :locals => {:event => event, :archive => true}
 
-%section
-  :markdown
-  
-    ***
-    
-    ##Past Events
-    
-    Check out the [past Transient Series events](/events/past), from November 2011.
+:markdown 
 
-    ***
-    
-    ##Submissions
-  
-    Transient Series is always interested in hearing about and possibly presenting new work. E-mail <a href="#" id="contactAddr-a" onmouseover="setAddr('a')" onfocus="setAddr('a')">Andrew</a> if you're interested.
+  ##Past Events
+
+  We've been doing things since 2011. [View Past Events](/events/past).
