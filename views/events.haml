@@ -3,13 +3,8 @@
   :markdown
   
     The Transient Series focuses on composers and performers who operate outside
-    of major institutions of contemporary music. For updates about the series,
-    [join our mailing list](http://eepurl.com/tCefr).
-
-    Transient Series is always interested in hearing about and possibly
-    presenting new work. E-mail <a href="#" id="contactAddr-a"
-    onmouseover="setAddr('a')" onfocus="setAddr('a')">Andrew</a> if you're
-    interested.
+    of major institutions of contemporary music. We've been putting on concerts
+    since 2011. Check out [Past Events](/events/past) for the history.
 
 - if @future_events.empty?
   %p No future events&mdash;but here are some of the things we've done in the past:
@@ -19,8 +14,3 @@
   - @future_events.each do |slug, event|
     = partial :event, :locals => {:event => event, :archive => true}
 
-:markdown 
-
-  ##Past Events
-
-  We've been doing things since 2011. [View Past Events](/events/past).
