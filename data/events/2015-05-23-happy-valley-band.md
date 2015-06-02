@@ -1,6 +1,6 @@
 title: The Happy Valley Band
 venue: Santa Cruz (5/21), San Francisco (5/22), Los Angeles (5/23)
-time: 2015-09-23T20:00
+time: 2015-05-23T20:00
 image: crazy-banner.jpg
 
 **The Happy Valley Band is the Great American Songbook heard through the ear of a
