@@ -6,7 +6,7 @@ image: severine.jpg
 
 French cello virtuoso **$Ɛ∨ƐR!ℵƐ ℬa||0∩** returns to the Bay Area with a concert of
 new and recent works exploring resonance, order, and chaos for solo cello and
-solo piano by Elizabeth Adams, David Kant, Andrew C. Smith, Ma'ayan Tsadka, and
+solo piano by Elizabeth Adams, David Kant, Andrew C. Smith, Maayan Tsadka, and
 K.C.M. Walker, curated by Indexical. Completing the program, Santa Cruz based
 composer/pianist Andrew C. Smith performs solo piano works. 
 
@@ -14,8 +14,8 @@ composer/pianist Andrew C. Smith performs solo piano works.
 
 **Elizabeth Adams** (nyc) - daylight, housing crisis, touch (2014)  
 **David Kant** (santa cruz) - new piece  
-**Ma’ayan Tsadka** (santa cruz) - cello studies (2015)  
-**Ma’ayan Tsadka** (santa cruz) - Piano Study No. 1 (2015)  
+**Maayan Tsadka** (santa cruz) - cello studies (2015)  
+**Maayan Tsadka** (santa cruz) - Piano Study No. 1 (2015)  
 **K.C.M. Walker** (charleston, sc) - precessional (2012)  
 **Andrew C Smith** (santa cruz) - In the sense of transparence (2015)
 
